@@ -1,19 +1,19 @@
-Name:           radsecproxy
-Version:        1.8.0
-Release:        1%{?dist}
-Summary:        a generic RADIUS proxy
+Name:	radsecproxy
+Version:	1.8.0
+Release:	1%{?dist}
+Summary:	a generic RADIUS proxy
 
-License:        NORDUnet
-URL:            https://radsecproxy.github.io/
-Source0:        https://github.com/%{name}/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
+License:	BSD
+URL:	https://radsecproxy.github.io/
+Source0:	https://github.com/%{name}/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
 Source1:	radsecproxy.service
 Source2:	radsecproxy.logrotate
 Source3:	radsecproxy.rsyslog
 Source4:	radsecproxy.tmpfiles
-BuildRequires: gcc
-BuildRequires: openssl-devel
-Requires(post): policycoreutils-python
-Requires(postun): policycoreutils-python
+BuildRequires:	gcc
+BuildRequires:	openssl-devel
+Requires(post):	policycoreutils-python
+Requires(postun):	policycoreutils-python
 #Requires:       
 
 %description
