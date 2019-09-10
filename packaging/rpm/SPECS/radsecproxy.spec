@@ -6,10 +6,6 @@ Summary:	a generic RADIUS proxy
 License:	BSD
 URL:	https://radsecproxy.github.io/
 Source0:	https://github.com/%{name}/%{name}/releases/download/%{version}/%{name}-%{version}.tar.gz
-Source1:	radsecproxy.service
-Source2:	radsecproxy.logrotate
-Source3:	radsecproxy.rsyslog
-Source4:	radsecproxy.tmpfiles
 BuildRequires:	gcc
 BuildRequires:	openssl-devel
 Requires(post):	policycoreutils-python
@@ -39,7 +35,6 @@ and some only IPv6.
 
 %prep
 %autosetup
-cp -p %SOURCE1 %SOURCE2 %SOURCE3 %SOURCE4 .
 
 %build
 %configure
