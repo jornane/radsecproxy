@@ -59,7 +59,5 @@ EXTRA_DIST = \
 
 html: radsecproxy.html radsecproxy-hash.html radsecproxy.conf.html
 
-%.html: %.1
-	groff -mandoc -Thtml $< >$@
-%.html: %.5
+%.html: %.1 %.5
 	groff -mandoc -Thtml $< >$@
